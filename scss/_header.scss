@@ -1,0 +1,62 @@
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	height: $header-height;
+	color: $mainColor;
+	padding: 20px;
+
+	font-weight: 200;
+
+	a.logo {
+		//margin-top: 5px;
+	}
+
+	$hdrMrgnTop: 32px;
+	.slogan {
+		margin: $hdrMrgnTop 0 0 40px;
+		color: $redColor;
+	}
+
+	.phones {
+		margin-top: $hdrMrgnTop;
+		font-size: 24px;
+		span {
+			font-size: 18px;
+			color: $greyColor;
+			// margin-left: 20px;
+		}
+	}
+
+	nav {
+		display: inline-block;
+		width: 100%;
+		margin: 22px 0 0 0;
+		font-weight: normal;
+
+		ul {
+			margin-left: 77px;
+		}
+
+		ul li{
+			float: left;
+			margin-right: 5px;
+
+			a {
+				padding: 3px 5px;
+				text-transform: uppercase;
+
+				@include transition (all 80ms ease-in-out);
+
+				&:hover, &.active {
+					background: $redColor2;
+					color: $lightGreyColor;
+				}
+			} // a
+		} // ul li
+
+		.btn {
+			margin-top: -8px;
+		}
+
+	} // nav
+} // header

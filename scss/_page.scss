@@ -1,0 +1,92 @@
+.middle {
+	padding-top: 20px;
+
+	aside.left-sidebar {
+		//margin-top: 22px;
+		margin-bottom: 20px;
+
+		h2{ 
+
+			&.active {
+
+				a {
+					color: $redColor3;
+					border: none;
+					font-size: 16px;
+				}
+
+				&:hover a {
+					color: lighten($redColor3, 10%);
+					border-bottom: 1px dashed;
+				}
+
+				.icon {
+
+					&.first {background-position: -41px -7px}
+
+					&.second {background-position: -41px -45px}
+
+					&.third {background-position: -40px -79px}
+
+					&.fourth {background-position: -38px -117px}
+				}
+			}
+
+			a {
+					font-size: 14px;
+					line-height: 21px;
+					text-transform: uppercase;
+					border-bottom: 1px dashed;
+					text-decoration: none;
+			}
+
+
+			.icon {
+				width: 36px;
+				height: 30px;
+				margin-right: 10px;
+				float: left;
+				background: url('../i/icons-sprite.png') 0 0 no-repeat;
+				background-size: 75px;
+				background-position: -41px -7px;
+
+				&.first {background-position: -4px -7px}
+
+				&.second {background-position: -4px -45px}
+
+				&.third {background-position: -3px -79px}
+
+				&.fourth {background-position: -1px -117px}
+			}
+
+			&:hover {
+						opacity: 0.9;
+					}
+		}
+
+		ul {
+
+			margin-top: -10px;
+			margin-bottom: 30px;
+
+			li {
+				margin-bottom: 15px;
+
+				&:after {
+					content: '\203A';
+					display: block;
+					position: absolute;
+					margin-top: -19px;
+					left: 240px;
+					//color: $greyColor;
+				}
+
+				a {
+					text-decoration: underline;
+				}
+			}
+
+		}
+
+	}
+}

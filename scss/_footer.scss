@@ -1,0 +1,13 @@
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	width: 100%;
+	height: $footer-height;
+	margin-top: -$footer-height;
+    clear:both;
+	position: relative;
+	padding-top: $footer-padding-top;
+	padding-bottom: $footer-padding-bottom;
+	background: $greyColor2;
+	font-size: 13px;
+}

@@ -1,0 +1,314 @@
+@import
+   "../bourbon/bourbon",
+   "settings",
+   "reset",
+   "forms",
+   "slider",
+   "header",
+   "middle",
+   "page",
+   "cat",
+   "sidebars",
+   "footer",
+   "lightbox";
+
+html {
+	height: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+
+body {
+	font: $mainFont;
+	width: 100%;
+	height: 100%;
+	background: $bgColor;
+	color: $mainColor;
+}
+
+a, a:visited, a:link {
+	color: $mainColor;
+	text-decoration: none;
+
+	&:hover {
+		color: lighten($mainColor, 40%);
+	}
+}
+
+h1, h2, h3, h4, h5, p {
+	margin-bottom: $margin;
+}
+
+h1 {
+	font-size: 24px;
+	line-height: 24px;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 18px;
+	text-transform: uppercase;
+	text-align: left;
+
+	a, a:visited, a:link {
+		text-decoration: underline;
+	}
+}
+
+strong {
+	font-weight: bold;
+}
+
+.date {
+	color: $greyColor3;
+	font-size: 12px;
+	display: block;
+}
+
+.container {
+	//padding: 0 0 $margin 0;
+}
+
+.wrapper {
+	width: $gridWidth;
+	max-width: $gridWidth;
+	margin: 0 auto;
+	min-height: 100%;
+	position: relative;
+	height: auto !important;
+	height: 100%;
+	@include clearfix;
+}
+
+.page-wrap {
+	min-height: 100%;
+	// height: auto !important;
+	// height: 100%;
+	// margin-bottom: -$footer; 
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+  height: $footer; 
+}
+
+section {
+	width: 100%;
+	overflow: hidden;
+}
+
+.btn, a.btn {
+	display: inline-block;
+	background: $mainColor;
+	color: $bgColor;
+	padding: 8px 18px;
+	cursor: pointer;
+	text-transform: uppercase;
+
+	@include transition (background 150ms ease-in-out);
+
+	&:hover {
+		background: lighten($mainColor, 30%);
+		color: $bgColor;
+	}
+
+	&:active {
+		@include box-shadow(inset 0 2px 4px hsla(0, 0%, 0%, 0.8));
+	}
+}
+
+section.breadcrumbs {
+	background: $redColor3;
+	height: 65px;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #fff;
+
+	.wrapper {
+		padding-top: 25px;
+
+		a:first-child {
+			margin-left: 0;
+		}
+
+		a {
+			margin: 0 10px;
+		}
+	}
+	
+	a {
+		color: #fff;
+
+		&:hover {
+			color: #fff;
+			text-decoration: underline;
+		}
+	}
+}
+
+.border-shadow {
+		border: 5px solid $redColor3;
+		@include box-shadow(0 4px 10px hsla(0, 0%, 0%, 0.3));
+	}
+
+a.lbox {
+	margin-right: 23px;
+	margin-bottom: 18px;
+	
+	img {
+		@extend .border-shadow;
+	}
+
+	//display: inline-block;
+	width: 220px;
+	//height: 140px;
+	display: block;
+	float: left;
+	@include clearfix;
+	@include transition (opacity 150ms ease-in-out);
+	
+	&:hover {
+		opacity: 0.8;
+	}
+
+	img {
+		margin-bottom: 15px;
+	}
+
+	text-decoration: underline;
+}
+
+ul.pagination {
+	list-style: none;
+	//margin-left: 10px;
+	height: 35px;
+	margin-bottom: 18px;
+	margin-top: 10px;
+
+	li:before {
+		content:'';
+	}
+
+	li {
+		float: left;
+		margin: 3px 3px 3px 0;
+
+		a {
+			@include transition (all 150ms ease-in-out);
+			padding: 8px 12px;
+		    text-decoration: underline;
+		    &:hover {
+				background: $greyColor2;
+			}
+		}
+
+		&.active {
+			a {
+				background: $redColor3;
+				color: #fff;
+				&:hover {
+					color: #fff;
+					background: lighten($redColor3, 10%);
+				}
+			}								
+		}
+
+		&.next a {
+			background: transparent;
+			text-decoration: underline;
+			&:hover {
+				color:#8796A1;
+			}
+		}
+
+	}
+}
+
+div.more-info a {
+	display: inline-block;
+	text-decoration: underline;
+}
+
+.gallery {
+	overflow: auto;
+}
+
+.item {
+	overflow: auto;
+	img {
+		margin: 0 10px 15px 0;
+	}
+}
+
+.error {
+	h1 {
+		text-transform: none;
+		font-size: 50px;
+		line-height: 50px;
+	}
+	a {
+		text-decoration: underline;
+	}
+}
+
+.contacts {
+	h1 {
+		margin-bottom: 30px;
+	}
+	.inner {
+		font-size: 16px;
+		width: 500px;
+		margin-bottom: $margin;
+		span {
+			text-transform: uppercase;
+			color: $redColor3;
+			font-weight: 500;
+			float: left;
+			display: inline-block;
+			margin-right: 10px;
+		}
+		span, div {
+			margin-bottom: 18px;
+		}
+	}
+	.map {
+		width: 990px;
+		display: block;
+		height: 430px;
+		@extend .border-shadow;
+		clear: both;
+		margin-bottom: $margin * 3;
+	}
+}
+
+.pull-left {
+	float: left !important;
+	@include clearfix;
+}
+
+.pull-right {
+	float: right !important;
+	@include clearfix;
+}
+
+.center {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	@include clearfix;
+}
+
+.center-align {
+	text-align: center;
+	@include clearfix;
+}
+
+.clearfix {
+	@include clearfix;
+}

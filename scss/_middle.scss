@@ -1,0 +1,164 @@
+/* Middle
+-----------------------------------------------------------------------------*/
+.middle {
+	width: 100%;
+	min-height: 220px;
+	// padding: 0 0 70px;
+	position: relative;
+	margin-top: $margin;
+}
+.middle:after {
+	display: table;
+	clear: both;
+	content: '';
+}
+.container {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+.content {
+	padding: 0 0 0 270px;
+
+	.col-1-3 {
+		width: 230px;
+		float: left;
+		margin-right: 13px;
+		@include clearfix;
+	}
+
+	
+}
+
+.content-left {
+	padding: 0 290px 0 0;
+	img {
+		margin-bottom: $margin;
+	}
+
+	span.date {
+		margin-top: 5px;
+		margin-bottom: $margin - 5px;
+	}
+}
+
+section.slide {
+	height: 345px;
+
+	img {
+		width: 100%;
+		margin-top: -200px;
+		min-width: 1000px;
+	}
+}
+
+section.menu {
+	background: $bgColor;
+	height: 210px - 45px;
+	padding: 35px 0 0;
+
+	ul li {
+		float: left;
+		$marginLeft: 25px;
+		margin-left: $marginLeft;
+		width: ($gridWidth - $marginLeft * 3) / 4;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		a {
+			div {
+				width: 140px;
+				height: 110px;
+				background: url('../i/icons-sprite.png') 0 0 no-repeat;
+				margin: 0 auto;
+			}
+			span {
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+				font-size: 14px;
+				text-transform: uppercase;
+			}
+		}
+
+		&.first a {
+			div { background-position: 0px -17px; }
+			&:hover { 
+				div { background-position: -138px -17px; } 
+			} 
+		}
+
+		&.second a {
+			div { background-position: 0px -155px; }
+			&:hover { 
+				div { background-position: -138px -155px; } 
+			} 
+		}
+
+		&.third a {
+			div { background-position: 0px -297px; }
+			&:hover { 
+				div { background-position: -138px -297px; } 
+			} 
+		}
+
+		&.fourth a {
+			div { background-position: 0px -435px; }
+			&:hover { 
+				div { background-position: -138px -435px; } 
+			} 
+		}
+	}
+}
+
+section.slider {
+	background: $redColor3;
+	height: 320px;
+
+	.tp-caption.maintext {
+		p {
+			background: #fff;
+			padding: 7px 15px;
+			margin-bottom: 2px;
+			float:left;
+    		clear:left;
+		}
+		font-weight: 200;
+		font-size: 24px;
+		line-height: 24px;
+		// padding: 15px;
+	}
+
+	.tp-caption.subtext {
+		color: #fff;
+		width: 510px;
+		white-space: normal;
+		font-style: italic;
+	}
+}
+
+main.middle {
+
+	margin: $margin 0 0;
+
+	h1.home {
+		text-align: center;
+	}
+
+	.col-6 {
+		width: 480px;
+  		float: left;
+  		margin: $margin 10px $margin 0;
+  		font-weight: 200;
+
+  		@include clearfix;
+	}
+
+	.btn {
+		margin: $margin 0; 
+	}
+}
+
+

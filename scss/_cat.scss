@@ -1,0 +1,88 @@
+div.cat, div.news {
+
+	.inner {
+		width: 500px;
+		margin-bottom: 30px;
+
+		span.date {
+			margin-top: -10px;
+			margin-bottom: 8px;
+			display: block;
+			position: relative;
+		}
+
+		h3 {
+			margin-top: 8px;
+		}
+
+		div.more-info {
+			margin-top: -10px;
+			}
+	}
+
+	h1 {
+		text-align: left;
+		margin-bottom: 25px;
+		text-transform: uppercase;
+	}
+
+	.icon{
+		width: 49px;
+		height: 45px;
+		float: left;
+		background: url('../i/icons-sprite.png') 0 0 no-repeat;
+		background-size: 100px;
+		background-position: -6px -10px;
+
+		&.first {background-position: -6px -10px}
+
+		&.second {background-position: -6px -60px;}
+
+		&.third {background-position: -6px -105px;}
+
+		&.fourth {background-position: -1px -158px;}
+	}
+
+	ul, h1 {
+		margin-left: 60px;
+
+		li {
+			margin-bottom: 18px;
+
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.category {
+	// margin: 0 0 30px -12px;
+	display: block;
+	margin-bottom: 30px;
+
+	& > div {
+		width: 220px;
+		height: 240px;
+		float: left;
+		padding: 10px;
+		// border: 2px solid #fff;
+
+		@include transition (opacity 150ms ease-in-out);
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		img {
+			width: 220px;
+			height: 220px;
+			margin-bottom: 5px;
+		}
+
+		a {
+			margin: 3px 0;
+			padding: 0;
+		}
+	}
+}
